@@ -1453,7 +1453,7 @@ GlobalValues.myGEdit = new gLabEditor("Untitled", true);
                 
                 controlTimedInterruptJMenuItem = new JMenuItem("Toggle Timed Interrupts - Current state is  "+GlobalValues.timedInterruptScriptingOn);
                 controlTimedInterruptJMenuItem.setFont(GlobalValues.uifont);
-                controlTimedInterruptJMenuItem.setToolTipText("Controls timed interrupts for scripts");
+                controlTimedInterruptJMenuItem.setToolTipText("Controls timed interrupts for scripts. When activated the script is interrupted when the timeout expires");
                 controlTimedInterruptJMenuItem.addActionListener((ActionEvent e) -> {
                       GlobalValues.GroovyShell = null;
                
@@ -1461,7 +1461,7 @@ GlobalValues.myGEdit = new gLabEditor("Untitled", true);
                      controlTimedInterruptJMenuItem.setText("Toggle Timed Interrupts- Current state is  "+GlobalValues.timedInterruptScriptingOn);
                 });
                 
-                 JMenuItem setTimedInterruptValueJMenuItem = new JMenuItem("Set timed interrupt value  ");
+                 JMenuItem setTimedInterruptValueJMenuItem = new JMenuItem("Set timed interrupt value. After that time the script is interrupted.  ");
                  setTimedInterruptValueJMenuItem.setFont(GlobalValues.uifont);
                  setTimedInterruptValueJMenuItem.setToolTipText("Sets the timed interrupt value for scripts");
                  setTimedInterruptValueJMenuItem.addActionListener((ActionEvent e) -> {
