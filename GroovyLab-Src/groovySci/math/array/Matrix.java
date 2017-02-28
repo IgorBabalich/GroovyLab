@@ -207,7 +207,7 @@ final public int length() {
         d[i-1] = row;
     }
 
-   
+   // make a copy of data array using Java 8 streams
    final public double [][] toDoubleArrayStream() {
        int Nrows = d.length; int Ncols = d[0].length;
        double [][] data = new double[Nrows][Ncols];
@@ -234,9 +234,8 @@ final public int length() {
 final public double [][] toDoubleArray() { 
     int Nrows = d.length; int Ncols = d[0].length;
     double [][] data = new double[Nrows][Ncols];
-    for (int r = 0; r < Nrows; r++)
-        for (int c=0; c < Ncols; c++ )
-            data[r][c] = d[r][c];
+        for (int r = 0; r < Nrows; r++)
+          data[r] = DoubleArray.copy(d[r]);
     return data;
 }
 

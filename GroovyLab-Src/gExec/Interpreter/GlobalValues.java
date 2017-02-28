@@ -49,19 +49,17 @@ import org.scilab.modules.javasci.Scilab;
 // this class contains important global definitions and constants
 public class GlobalValues
 {  
-    static public   String  dateOfBuild =  "18-Feb-17";       // tracks the date of build    
+    static public   String  dateOfBuild =  "28-Feb-2017";       // tracks the date of build    
 
     // codes for GroovyLab server computations
     static public final int exitCode = -1;   // code for server to exit
     static public final int svdCode = 1;   // code to perform an SVD computation
     
-    static public boolean timedInterruptScriptingOn = false;    
-    static public long timedInterruptValue = 5000L;
+    static public boolean timedInterruptScriptingOn = false;    //  interruption of scripts after timeout?
+    static public long timedInterruptValue = 5000L;   // the default timeout value for scripts
     static public String timedInterruptScriptingOnFlag="false";
     static public String timedInterruptValueProp="5000";
-    
-    
-    
+      
     static public String serverIP = "127.0.0.1";  // the IP address of the server
     static public int groovyLabServerPort = 8000;   // port on which GroovyLab server is listening
 
@@ -76,9 +74,6 @@ public class GlobalValues
   static public DataOutputStream     writer = null;
   
     static public ServerSocket groovyLabServerSocket;    // socket for GroovyLab's server
-    
-    
-    static public Future<String> commandFuture = null;  // not used yet!
     
     // variables for multithreaded operations
     static public   int multithreadingOpLimit  = 1000;  // a matrix with more elements than this is conidered large, thus use multithreading
@@ -107,7 +102,7 @@ public class GlobalValues
     static public   boolean   CompileIndy  = false;  // controls whether the Groovy compiler uses invokedynamic
     // an AST transformation that transforms BigDecimals to Doubles and results in much faster code
     static public   boolean   CompileDecimalsToDoubles = true;  
-    static public   String jdkTarget = "1.8";
+    static public   String  jdkTarget = "1.8";
     
     // in "Global" mode code completion of the rsyntaxArea based GroovyLab's editor, provides
     // code completion help based on fixed input strings. This help concerns basic commands 
