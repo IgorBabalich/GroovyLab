@@ -49,7 +49,7 @@ import org.scilab.modules.javasci.Scilab;
 // this class contains important global definitions and constants
 public class GlobalValues
 {  
-    static public   String  dateOfBuild =  "18-March-2017";       // tracks the date of build    
+    static public   String  dateOfBuild =  "4-April-2017";       // tracks the date of build    
 
     // codes for GroovyLab server computations
     static public final int exitCode = -1;   // code for server to exit
