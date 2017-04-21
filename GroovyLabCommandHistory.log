@@ -1,10 +1,10 @@
-plot(vrand(900))
 n
-x
-8
-x
+n
 x
 x[1]
 x
+x
+8
+x
 n
-n
+plot(vrand(900))

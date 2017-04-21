@@ -46,32 +46,16 @@ import org.matheclipse.core.expression.F;
 import org.scilab.modules.javasci.Scilab;
 
 
+
 // this class contains important global definitions and constants
 public class GlobalValues
 {  
-    static public   String  dateOfBuild =  "4-April-2017";       // tracks the date of build    
-
-    // codes for GroovyLab server computations
-    static public final int exitCode = -1;   // code for server to exit
-    static public final int svdCode = 1;   // code to perform an SVD computation
+    static public   String  dateOfBuild =  "21-April-2017";       // tracks the date of build    
     
-    static public boolean timedInterruptScriptingOn = false;    //  interruption of scripts after timeout?
-    static public long timedInterruptValue = 5000L;   // the default timeout value for scripts
-    static public String timedInterruptScriptingOnFlag="false";
-    static public String timedInterruptValueProp="5000";
-      
-    static public String serverIP = "127.0.0.1";  // the IP address of the server
-    static public int groovyLabServerPort = 8000;   // port on which GroovyLab server is listening
-
-    // the executor service is used to exploit Java multithreading for asynchronous computation operations and for
+       // the executor service is used to exploit Java multithreading for asynchronous computation operations and for
     // other tasks, as e.g. matrix multiplication 
   static public ExecutorService execService =   Executors.newFixedThreadPool(ConcurrencyUtils.getNumberOfProcessors());
     
-  static public Socket sclient = null;     // client socket
-  static public InputStream   clientReadStream = null;   // client's read stream
-  static public OutputStream  clientWriteStream =  null;   // client's write stream 
-  static public DataInputStream    reader = null;   
-  static public DataOutputStream     writer = null;
   
     static public ServerSocket groovyLabServerSocket;    // socket for GroovyLab's server
     
@@ -84,19 +68,6 @@ public class GlobalValues
       // the pendingThreads class allows to cancel task started with the Shift-F6 keystroke
      // however, cancelling Java threads that are not designed for interruption, is an involved and problematic issue
     static public gExec.Interpreter.PendingThreads pendingThreads = new gExec.Interpreter.PendingThreads();
-    
-    // variables for GroovyLab - MATLAB interface
-    static public boolean matlabInitedFlag = false;   // whether  GroovyLab - MATLAB connection is inited
-    static public MatlabProxyFactory factory = null;
-    static public MatlabProxy proxy = null; 
-    
-    // variables for GroovyLab - SciLab interface
-    static public boolean sciLabInitedFlag = false;   // whether  GroovyLab - SciLab connection is inited
-    static public Scilab scilabObj  = null; 
-    
-// variables for NVIDIA CUDA  interface   
-    static public boolean useCUDAflag = false;
-    static public String useCUDAprop = "false";
     
     
     static public   boolean   CompileIndy  = false;  // controls whether the Groovy compiler uses invokedynamic
@@ -478,7 +449,39 @@ public class GlobalValues
     static public boolean displayLatexOnEval = true;
     static public int FONT_SIZE_TEX = 18;
   
+        // variables for GroovyLab - MATLAB interface
+    static public boolean matlabInitedFlag = false;   // whether  GroovyLab - MATLAB connection is inited
+    static public MatlabProxyFactory factory = null;
+    static public MatlabProxy proxy = null; 
     
+    // variables for GroovyLab - SciLab interface
+    static public boolean sciLabInitedFlag = false;   // whether  GroovyLab - SciLab connection is inited
+    static public Scilab scilabObj  = null; 
+    
+// variables for NVIDIA CUDA  interface   
+    static public boolean useCUDAflag = false;
+    static public String useCUDAprop = "false";
+    
+ static public boolean timedInterruptScriptingOn = false;    //  interruption of scripts after timeout?
+    static public long timedInterruptValue = 5000L;   // the default timeout value for scripts
+    static public String timedInterruptScriptingOnFlag="false";
+    static public String timedInterruptValueProp="5000";
+ 
+  static public Socket sclient = null;     // client socket
+  static public InputStream   clientReadStream = null;   // client's read stream
+  static public OutputStream  clientWriteStream =  null;   // client's write stream 
+  static public DataInputStream    reader = null;   
+  static public DataOutputStream     writer = null;
+ 
+    
+   // codes for GroovyLab server computations
+    static public final int exitCode = -1;   // code for server to exit
+    static public final int svdCode = 1;   // code to perform an SVD computation
+
+    static public String serverIP = "127.0.0.1";  // the IP address of the server
+    static public int groovyLabServerPort = 8000;   // port on which GroovyLab server is listening
+
+
     
     static public String buildTitle() {
       String mainFrameTitle =        "GroovyLab based on Groovy "+org.codehaus.groovy.util.ReleaseInfo.getVersion()+
