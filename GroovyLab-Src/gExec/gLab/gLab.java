@@ -1976,7 +1976,7 @@ GlobalValues.myGEdit = new gLabEditor("Untitled", true);
              
             gLab.uiMainFrame = myGui;
             
-            if (GlobalValues.hostIsWin64 || GlobalValues.hostIsLinux64 || GlobalValues.hostIsMac)
+          if (GlobalValues.hostIsWin64 || GlobalValues.hostIsLinux64 || GlobalValues.hostIsMac)
   GlobalValues.GroovyShell.evaluate("gsl_sf_bessel_J1(0.23)");
             
             
