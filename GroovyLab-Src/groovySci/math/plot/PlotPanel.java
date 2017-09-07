@@ -34,7 +34,6 @@ import java.awt.Graphics2D;
 import java.io.FileOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sun.security.jca.GetInstance;
 
 
 
