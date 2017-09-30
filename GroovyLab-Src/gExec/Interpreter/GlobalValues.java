@@ -50,7 +50,7 @@ import org.scilab.modules.javasci.Scilab;
 // this class contains important global definitions and constants
 public class GlobalValues
 {  
-    static public   String  dateOfBuild =  "07-Sep-17";       // tracks the date of build    
+    static public   String  dateOfBuild =  "29-Sep-17";       // tracks the date of build    
     
        // the executor service is used to exploit Java multithreading for asynchronous computation operations and for
     // other tasks, as e.g. matrix multiplication 
