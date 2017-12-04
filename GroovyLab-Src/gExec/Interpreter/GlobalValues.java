@@ -50,7 +50,7 @@ import org.scilab.modules.javasci.Scilab;
 // this class contains important global definitions and constants
 public class GlobalValues
 {  
-    static public   String  dateOfBuild =  "29-Sep-17";       // tracks the date of build    
+    static public   String  dateOfBuild =  "03-Dec-17";       // tracks the date of build    
     
        // the executor service is used to exploit Java multithreading for asynchronous computation operations and for
     // other tasks, as e.g. matrix multiplication 
@@ -65,7 +65,7 @@ public class GlobalValues
     // if this parameter is not specified by a property, it is computed dynamically at run time
     static public   int mulMultithreadingLimit = -1; 
     static public String  mulMultithreadingLimitProp="undefined";
-      // the pendingThreads class allows to cancel task started with the Shift-F6 keystroke
+      // the pendingThreads class allows to cancel task started with the Shift-F6 keystrokeF
      // however, cancelling Java threads that are not designed for interruption, is an involved and problematic issue
     static public gExec.Interpreter.PendingThreads pendingThreads = new gExec.Interpreter.PendingThreads();
     

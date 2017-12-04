@@ -407,18 +407,15 @@ public void redirectConsole()  {
        }
         
         
-        
         GlobalValues.readUserPaths();
         
         
         InitConsole();
-
         
         interpreter = new Interpreter();
         groovySciToolboxes.warmUpGroovy();
         
-        
-        
+   
         if (GlobalValues.useCUDAflag) {  // use CUDA is enabled
          if (NativeLibsObj.cudaObj != null) {  // CUDA inited correctly
 
@@ -438,6 +435,7 @@ public void redirectConsole()  {
                 SwingUtilities.invokeLater(new Runnable() {
      public void run() {  // run in  */
                 myId.addWindowListener((WindowListener)myId);
+        System.out.println("here 20");
                 
                 
                 myId.setResizable(true);
@@ -477,13 +475,13 @@ public void redirectConsole()  {
     GlobalValues.consoleOutputWindow.output.setFont(new Font(GlobalValues.outConsoleFontName, Font.PLAIN, Integer.parseInt(GlobalValues.outConsoleFontSize)));
                 
 GlobalValues.myGEdit = new gLabEditor("Untitled", true);
-    
+           
          GlobalAutoCompletion.initAutoCompletion();
-                
+       
                 }         
             }); 
 
-                
+                   
                 
                 
                     
@@ -1977,7 +1975,7 @@ GlobalValues.myGEdit = new gLabEditor("Untitled", true);
             gLab.uiMainFrame = myGui;
             
           if (GlobalValues.hostIsWin64 || GlobalValues.hostIsLinux64 || GlobalValues.hostIsMac)
-  GlobalValues.GroovyShell.evaluate("gsl_sf_bessel_J1(0.23)");
+ // GlobalValues.GroovyShell.evaluate("gsl_sf_bessel_J1(0.23)");
             
             
      SwingUtilities.invokeLater(new Runnable() {
