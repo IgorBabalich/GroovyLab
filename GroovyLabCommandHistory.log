@@ -1,4 +1,5 @@
 plot(vrand(900))
+x=8
 n
 x
 8
@@ -7,4 +8,3 @@ x
 x[1]
 x
 n
-plot(vrand(900))
